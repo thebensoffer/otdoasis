@@ -1,100 +1,103 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero */}
+      <header className="relative bg-gradient-to-br from-teal-700 via-teal-600 to-emerald-500 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-28 text-center">
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
+            OTD Oasis
+          </h1>
+          <p className="text-xl sm:text-2xl font-light max-w-2xl mx-auto leading-relaxed opacity-90">
+            A safe harbor for those who&apos;ve charted their own course beyond
+            Orthodox Judaism.
+          </p>
+        </div>
+        {/* subtle wave divider */}
+        <svg
+          className="absolute bottom-0 w-full text-[#faf9f6]"
+          viewBox="0 0 1440 60"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="currentColor"
+            d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z"
+          />
+        </svg>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Mission */}
+      <section className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-3xl font-semibold text-gray-900 mb-6">
+          Our Mission
+        </h2>
+        <p className="text-lg leading-relaxed text-gray-700">
+          Leaving an insular religious community is one of the most courageous
+          — and isolating — journeys a person can take. OTD Oasis exists to
+          make sure no one walks that path alone. We build and support projects
+          that offer{" "}
+          <span className="font-medium text-teal-700">resources</span>,{" "}
+          <span className="font-medium text-teal-700">community</span>, and a
+          lasting sense of{" "}
+          <span className="font-medium text-teal-700">belonging</span> to
+          people who have left Orthodox Judaism.
+        </p>
+      </section>
+
+      {/* Current Projects */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
+            Current Projects
+          </h2>
+
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://beyondthederech.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="block max-w-xl mx-auto rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-8 group"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            <h3 className="text-2xl font-semibold text-teal-700 group-hover:text-teal-600 transition-colors mb-3">
+              Beyond the Derech
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              A community-driven platform connecting people who have left
+              Orthodox Judaism. Beyond the Derech provides a space to share
+              stories, find support groups, and access curated resources for
+              navigating life after leaving.
+            </p>
+            <span className="inline-flex items-center text-sm font-medium text-teal-600 group-hover:text-teal-500">
+              Visit beyondthederech.com
+              <svg
+                className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-auto bg-gray-900 text-gray-400 py-10">
+        <div className="max-w-5xl mx-auto px-6 text-center text-sm space-y-2">
+          <p>
+            <a
+              href="mailto:info@otdoasis.org"
+              className="hover:text-white transition-colors"
+            >
+              info@otdoasis.org
+            </a>
+          </p>
+          <p>&copy; {new Date().getFullYear()} OTD Oasis. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
