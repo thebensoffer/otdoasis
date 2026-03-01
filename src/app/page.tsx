@@ -152,7 +152,6 @@ export default function Home() {
               <a
                 href="mailto:info@otdoasis.org"
                 className="mt-4 text-xs text-teal-600 hover:underline"
-                onClick={(e) => e.stopPropagation()}
               >
                 Have an idea? Let us know →
               </a>
