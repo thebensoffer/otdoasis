@@ -113,27 +113,27 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <a
-              href="https://beyondthederech.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block rounded-3xl overflow-hidden border border-gray-200 hover:border-teal-300 shadow-sm hover:shadow-xl transition-all duration-300 p-8 bg-gradient-to-br from-teal-50 to-emerald-50"
-            >
+            <div className="group relative rounded-3xl overflow-hidden border border-gray-200 shadow-sm p-8 bg-gradient-to-br from-teal-50 to-emerald-50">
               <div className="flex items-start justify-between mb-4">
                 <span className="text-4xl">🛤️</span>
                 <span className="text-xs bg-teal-100 text-teal-700 px-3 py-1 rounded-full font-medium">Live</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-700 transition-colors">Beyond the Derech</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Beyond the Derech</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
                 A community-driven platform connecting people who have left Orthodox Judaism. Stories, support, curated resources, and a verified member community.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-600 group-hover:gap-2 transition-all">
+              <a
+                href="https://beyondthederech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-semibold text-teal-600 hover:gap-2 transition-all"
+              >
                 Visit beyondthederech.com
                 <svg className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
-              </span>
-            </a>
+              </a>
+            </div>
 
             <div className="group relative block rounded-3xl overflow-hidden border border-dashed border-gray-300 shadow-sm p-8 bg-gray-50 flex flex-col justify-center items-center text-center">
               <span className="text-4xl mb-4">🌱</span>
