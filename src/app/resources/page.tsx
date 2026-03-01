@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Logo } from "@/components/Logo"
 
 export const metadata: Metadata = {
   title: "Resources | OTD Oasis",
@@ -268,7 +269,7 @@ export default function ResourcesPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🌴</span>
+              <Logo size={28} />
               <div>
                 <p className="text-white font-bold text-sm leading-none">OTD Oasis</p>
                 <p className="text-gray-500 text-xs mt-0.5">A safe harbor for the OTD community</p>

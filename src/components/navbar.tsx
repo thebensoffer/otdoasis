@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { Logo } from "@/components/Logo"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -34,8 +35,8 @@ export function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className={`flex items-center gap-2 font-bold text-xl ${logoColor} transition-colors`}>
-          <span className="text-2xl">🌴</span>
+        <Link href="/" className={`flex items-center gap-2.5 font-bold text-xl ${logoColor} transition-colors`}>
+          <Logo size={30} />
           <span>
             <span className="font-light tracking-widest text-sm uppercase opacity-80">OTD</span>
             <span className="block font-extrabold tracking-tight leading-none -mt-1">Oasis</span>

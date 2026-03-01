@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Logo } from "@/components/Logo"
 
 export default function Home() {
   return (
@@ -21,19 +22,26 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          {/* Text logo */}
-          <div className="mb-8 inline-block">
-            <p className="text-white/70 text-xs font-semibold tracking-[0.4em] uppercase mb-1">Welcome to</p>
-            <div className="flex items-end justify-center gap-3">
-              <span className="text-white/80 text-4xl sm:text-5xl font-extralight tracking-[0.15em] uppercase">OTD</span>
-              <span
-                className="text-5xl sm:text-7xl font-black tracking-tight leading-none"
-                style={{ background: "linear-gradient(135deg, #5eead4, #34d399, #10b981)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-              >
-                Oasis
-              </span>
+          {/* Hero logo */}
+          <div className="mb-8 inline-flex flex-col items-center gap-5">
+            <p className="text-white/70 text-xs font-semibold tracking-[0.4em] uppercase">Welcome to</p>
+            {/* SVG icon */}
+            <div className="drop-shadow-[0_0_24px_rgba(20,184,166,0.55)]">
+              <Logo size={88} />
             </div>
-            <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
+            {/* Brand wordmark */}
+            <div>
+              <div className="flex items-end justify-center gap-3">
+                <span className="text-white/80 text-4xl sm:text-5xl font-extralight tracking-[0.15em] uppercase">OTD</span>
+                <span
+                  className="text-5xl sm:text-7xl font-black tracking-tight leading-none"
+                  style={{ background: "linear-gradient(135deg, #5eead4, #34d399, #10b981)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                >
+                  Oasis
+                </span>
+              </div>
+              <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
+            </div>
           </div>
 
           <p className="text-white/90 text-xl sm:text-2xl font-light leading-relaxed max-w-2xl mx-auto mb-10">
@@ -174,7 +182,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🌴</span>
+              <Logo size={28} />
               <div>
                 <p className="text-white font-bold text-sm leading-none">OTD Oasis</p>
                 <p className="text-gray-500 text-xs mt-0.5">A safe harbor for the OTD community</p>
